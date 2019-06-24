@@ -1,0 +1,28 @@
+{
+    "name": "davro/beehive",
+    "description": "Technical Test for the Bee-Game.",
+    "type": "composer",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "David Stevens",
+            "email": "mail.davro@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Game\\": "src/Game"
+        }
+    },
+	"require-dev": {
+		"phpunit/phpunit": "4.8.20"
+	},
+    "scripts": {
+		"run": "php beesinthetrap.php",
+        "phpunit": "vendor/bin/phpunit --bootstrap vendor/autoload.php --colors=always tests",
+        "test": [
+            "@phpunit"
+        ]
+	},
+    "minimum-stability": "dev"
+}
