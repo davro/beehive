@@ -17,21 +17,21 @@ class DroneBeeTest extends PHPUnit
         $bee = new \Game\Bee\Drone();
         $this->assertEquals($bee->getDamage(), 12);
     }
-	
+
     public function testGetterName()
     {
         $bee = new \Game\Bee\Drone();
         $this->assertEquals($bee->getName(), 'Drone');
     }
-	
+
     public function testLosingLife()
     {
         $bee = new \Game\Bee\Drone();
         $bee->hit();
-		
+
         $this->assertEquals($bee->getLife(), ($bee->getHp() - $bee->getDamage()));
     }
-	
+
     public function testDeath()
     {
         $bee = new \Game\Bee\Drone();
@@ -41,7 +41,7 @@ class DroneBeeTest extends PHPUnit
 
         $this->assertTrue($bee->isDead());
     }
-	
+
     public function testNotDeadMustBeAlive()
     {
         $bee = new \Game\Bee\Drone();
@@ -49,7 +49,7 @@ class DroneBeeTest extends PHPUnit
 
         $this->assertFalse($bee->isDead());
     }
-	
+
     public function testTerminate()
     {
         $bee = new \Game\Bee\Drone();

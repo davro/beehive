@@ -17,21 +17,21 @@ class WorkerBeeTest extends PHPUnit
         $bee = new \Game\Bee\Worker();
         $this->assertEquals($bee->getDamage(), 10);
     }
-	
+
     public function testGetterName()
     {
         $bee = new \Game\Bee\Worker();
         $this->assertEquals($bee->getName(), 'Worker');
     }
-	
+
     public function testLosingLife()
     {
         $bee = new \Game\Bee\Worker();
         $bee->hit();
-		
+
         $this->assertEquals($bee->getLife(), ($bee->getHp() - $bee->getDamage()));
     }
-	
+
     public function testDeath()
     {
         $bee = new \Game\Bee\Worker();

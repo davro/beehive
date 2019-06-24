@@ -11,7 +11,7 @@ class QueenBeeTest extends PHPUnit
         $bee = new \Game\Bee\Queen();
         $this->assertEquals($bee->getHp(), 100);
     }
-	
+
     public function testGetterDamage()
     {
         $bee = new \Game\Bee\Queen();
@@ -28,33 +28,33 @@ class QueenBeeTest extends PHPUnit
     {
         $bee = new \Game\Bee\Queen();
         $bee->hit();
-		
+
         $this->assertEquals($bee->getLife(), ($bee->getHp() - $bee->getDamage()));
     }
-	
+
     public function testDeath()
     {
         $bee = new \Game\Bee\Queen();
         while ($bee->isDead() !== true) {
             $bee->hit();
         }
-		
+
         $this->assertTrue($bee->isDead());
     }
-	
+
     public function testNotDeadMustBeAlive()
     {
         $bee = new \Game\Bee\Queen();
         $bee->hit();
-		
+
         $this->assertFalse($bee->isDead());
     }
-	
+
     public function testTerminate()
     {
         $bee = new \Game\Bee\Queen();
         $bee->terminate();
-		
+
         $this->assertTrue($bee->isDead());
     }
 }

@@ -11,7 +11,7 @@ class PlayTest extends PHPUnit
         $game = new \Game\Play();
         $this->assertEquals($game->getStatus(), \Game\Play::FIRST_MOVE);
     }
-	
+
     public function testProgress()
     {
         $game = new \Game\Play();
@@ -19,7 +19,7 @@ class PlayTest extends PHPUnit
         $this->assertEquals($game->getTurns(), 1);
         $this->assertEquals($game->getStatus(), \Game\Play::IN_PLAY);
     }
-	
+
     public function testLog()
     {
         $game = new \Game\Play();
@@ -43,7 +43,7 @@ class PlayTest extends PHPUnit
 
         $this->assertEquals($game->getStatus(), \Game\Play::GAME_OVER);
     }
-	
+
     public function testRestartGame()
     {
         $game = new \Game\Play();

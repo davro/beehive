@@ -39,8 +39,8 @@ class HiveTest extends PHPUnit
             $this->assertFalse($bee->isDead());
         }
         $hive->killAll();
-		$this->assertCount(0, $hive->getAll());
-		
+        $this->assertCount(0, $hive->getAll());
+
         $hive->reset();
         $this->assertCount(4, $hive->getAll());
     }
